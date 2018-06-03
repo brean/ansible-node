@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: root
+  roles:
+    - mongodb
+    - base
+    - node
+    - crewing
+  vars_files:
+    - variables.yml

@@ -1,0 +1,23 @@
+---
+
+- name: install base packages
+  apt: >
+    force=yes
+    name={{ item }}
+    state=present
+    update_cache=no
+  with_items:
+    - gcc
+    - g++
+    - make
+    - curl
+    - wget
+    - git
+    - htop
+    - vim
+    - ncdu
+    - unzip
+    - ssh
+    - tree
+    - ack-grep
+    - apt-transport-https

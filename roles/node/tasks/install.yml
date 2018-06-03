@@ -1,0 +1,20 @@
+---
+- name: Add key for NodeJS install
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    state: present
+
+- name: Add repository for NodeJS install
+  apt_repository:
+    repo: 'deb https://deb.nodesource.com/node_6.x stretch main'
+
+- name: Install NodeJS
+  apt: name={{ item }}
+    update_cache=yes
+    cache_valid_time=3600
+    state=present
+  become: root
+  with_items:
+  - nodejs
+  - nodeenv
+  - npm

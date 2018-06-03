@@ -1,0 +1,4 @@
+---
+- name: copy config template
+  template: src=.env.j2
+    dest={{ crewing.install_path }}/.env

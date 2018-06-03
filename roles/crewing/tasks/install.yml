@@ -1,0 +1,9 @@
+---
+- name: install nodemon
+  npm:
+    global: yes
+    name: nodemon
+
+- name: run npm install
+  npm:
+    path: "{{ crewing.install_path }}"

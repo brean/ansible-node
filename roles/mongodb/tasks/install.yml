@@ -1,0 +1,11 @@
+---
+
+- name: install MongoDB packages
+  apt: name=mongodb
+
+- name: Ensure the MongoDB service is started
+  become: root
+  service:
+    name: mongodb
+    state: started
+    enabled: true

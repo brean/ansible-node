@@ -1,0 +1,7 @@
+---
+nginx:
+  port: 80
+  servername: localhost
+
+crewing:
+  install_path: /srv/crewing
